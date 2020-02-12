@@ -1,10 +1,9 @@
 <h1>Restaurants</h1>
 
-
-<% @restaurants.each do |restaurant| %>
-  <div>
-    <h2><%= restaurant.name %></h2>
-    <h3> <%= restaurant.category %></h3>
-    <%= link_to "More details", restaurant_path(restaurant) %>
-  </div>
-<% end %>
+<div class="row">
+  <% @restaurants.each do |restaurant| %>
+    <div class="col-4">
+      <%= render "card_restaurant", restaurant: restaurant %>
+    </div>
+  <% end %>
+</div>
