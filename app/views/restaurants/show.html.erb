@@ -4,4 +4,11 @@
 <p><%= @restaurant.phone_number %></p>
 
 <h2>Reviews</h2>
-<p><%= @restaurant.reviews %></p>
+
+<% @restaurant.reviews.each do |review| %>
+  <div>
+    <h2><%= "*" * review.rating %></h2>
+    <p><%= review.content %></p>
+  </div>
+
+<% end %>
