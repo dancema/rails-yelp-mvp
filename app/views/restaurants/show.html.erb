@@ -1,8 +1,13 @@
-<h1><%= @restaurant.name %></h1>
+<div class="card mb-3">
+  <img src="https://i.picsum.photos/id/718/600/600.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= @restaurant.name %></h5>
+    <p class="card-text"><%= @restaurant.category %></p>
+    <p class="card-text"><%= @restaurant.address %></p>
+    <p class="card-text"><%= @restaurant.phone_number %></p>
+  </div>
+</div>
 
-<h2><%= @restaurant.category %></h2>
-<p><%= @restaurant.address %></p>
-<p><%= @restaurant.phone_number %></p>
 
 <h2>Reviews</h2>
 
@@ -10,12 +15,7 @@
   <%= render "restaurants/card_review", review: review %>
 <% end %>
 
-
-
-
-
-
-<h2>Write your review:</h2>
+<h2>Write your review</h2>
 
 <%= render "restaurants/form", restaurant: @restaurant, review: @review %>
 
